@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Tour</title>
+	<script src="jquery.js"></script>
+	<!-- <link href="bootstrap-tour-standalone.css" rel="stylesheet">	
+	<script src="bootstrap-tour-standalone.js"></script> -->
+
+
+
+	
+
+	<link href="bootstrap-3.3.7.css" rel="stylesheet">
+	<script src="bootstrap-3.3.7.js"></script>
+
+	<link href="bootstrap-tour.min.css" rel="stylesheet">
+	<script src="bootstrap-tour.min.js"></script>
+
+
+	
+
+<style type="text/css">
+	
+	.two {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+}
+img {
+    border-radius: 5px;
+  border: 1px solid beige;
+}
+.one {
+  width: 40%;
+  margin: auto;
+  font-family: Helvetica, arial;
+  color: #404040;
+  padding-bottom: 20px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<h1 class="one">My Awesome App</h1>
+
+<div class="two">
+  <img src="http://lorempixel.com/300/200"/>
+</div>
+
+<script type="text/javascript">
+	
+// Instance the tour
+var tour = new Tour({
+  steps: [
+  {
+    element: ".one",
+    title: "Welcome",
+    content: "Welcome to our app, take this tour to be familirized with it."
+  },
+      {
+    element: ".two",
+    title: "This Image",
+    content: "In this application we generate random placeholder images for any case."
+  }  
+],
+  backdrop: true,
+  storage: false
+});
+
+tour.init();
+
+tour.start();
+
+</script>
+</body>
+</html>
